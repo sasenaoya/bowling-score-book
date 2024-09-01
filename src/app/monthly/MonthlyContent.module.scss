@@ -1,0 +1,51 @@
+$border-color: #ccc;
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  table {
+    border-collapse: collapse;
+    flex: 1;
+  }
+}
+
+.monthHeader {
+  display: flex;
+  font-size: 2rem;
+  margin: 1rem 0;
+
+  button {
+    font-size: 2rem;
+  }
+}
+
+.week {
+  .day {
+    font-size: 1.5rem;
+    text-align: center;
+    border: 1px solid $border-color;
+    vertical-align: top;
+    padding: 0.5rem;
+
+    &.prevMonth,
+    &.nextMonth {
+      color: #bbb;
+    }
+  }
+
+  .day-0 {
+    color: red;
+  }
+
+  .day-6 {
+    color: blue;
+  }
+}
+
+tbody {
+  .day {
+    cursor: pointer;
+  }
+}
