@@ -9,9 +9,11 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import dayjs from "dayjs";
 
 import styles from "./MonthlyContent.module.scss";
+import { useRouter } from "next/navigation";
 
 export default function MonthlyContent() {
   const [date, setDate] = useState(dayjs().startOf("date"));
+  const router = useRouter();
 
   /** カレンダーを1か月前に移動 */
   function hadnlePrevMonthClick() {
@@ -25,6 +27,7 @@ export default function MonthlyContent() {
 
   /** 日付をクリック */
   function handleDateClick(date: dayjs.Dayjs) {
+    router.push(`create-event?date=${date.format("YYYY-MM-DD")}`);
   }
 
   /** ヘッダーを描画 */
@@ -92,7 +95,7 @@ export default function MonthlyContent() {
   }
 
   return (
-    <div className={styles.calendar}>
+    <div className={styles.content}>
       { renderMonthHeader() }
       <table>
         <thead>

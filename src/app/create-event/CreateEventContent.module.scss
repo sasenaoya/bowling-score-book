@@ -1,0 +1,14 @@
+$border-color: #ccc;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 20px;
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

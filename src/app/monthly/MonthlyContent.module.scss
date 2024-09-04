@@ -1,9 +1,12 @@
 $border-color: #ccc;
 
-.calendar {
+.content {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  margin: 10px;
+  box-sizing: border-box;
+  margin: 20px;
 
   table {
     border-collapse: collapse;
